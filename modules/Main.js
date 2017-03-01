@@ -1,5 +1,6 @@
 import React from 'react'
 import SidebarNav from './SidebarNav'
+import Section from './Section'
 
 var Main = React.createClass({
 
@@ -10,13 +11,7 @@ var Main = React.createClass({
             <section className="ma__action-details">
               <div className="ma__action-details__content">
                 <SidebarNav />
-                <h3 className="ma__comp-heading  " id="overview">
-                  Overview
-                </h3>
-                <section className="ma__rich-text js-ma-rich-text">
-                  <p>The Tankadere entered the Straits of Fo-Kien, which separate the island of Formosa from the Chinese coast, in the small hours of the night, and crossed the Tropic of Cancer. The sea was very rough in the straits, full of eddies formed by the
-                    counter-currents, and the chopping waves broke her course, whilst it became very difficult to stand on deck.</p>
-                </section>
+                <Section id="Overview" para={this.props.paragraph}/>
                 <section className="ma__split-columns">
                   <div className="ma__split-columns__container">
                     <div className="ma__split-columns__column">

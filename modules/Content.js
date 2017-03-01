@@ -30,7 +30,7 @@ componentDidUpdate (prevProps) {
     this.fetchContent(),
     this.setState({
     year: this.props.params.year,
-     quarter: this.props.params.quarter
+    quarter: this.props.params.quarter
     });
 },
 
@@ -60,7 +60,7 @@ componentWillUnmount: function() {
 
 <div>
 <Header yr={year} qr={quarter} title={title} subtitle={paragraph}/>
-<Main />
+<Main paragraph={paragraph}/>
 <Footer />
 </div>
     )
