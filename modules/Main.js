@@ -11,16 +11,13 @@ var Main = React.createClass({
             <section className="ma__action-details">
               <div className="ma__action-details__content">
                 <SidebarNav />
-                <Section id="Overview" para={this.props.paragraph}/>
+                <Section id="Overview" {...this.props} index={0} />
                 <section className="ma__split-columns">
                   <div className="ma__split-columns__container">
                     <div className="ma__split-columns__column">
                       <figure className="ma__figure">
                         <img className="ma__image" alt="alt text" src="/assets/images/placeholder/400x300.png" height width />
                         <figcaption className="ma__figure__caption">
-                          <p><b>Opioid-Related Death Count and Rate</b>
-                          </p><p>
-                          </p><p>Bar/line chart combo with “Year” and “Month” buttons above them. Count and death rate would appear as a tooltip when you hover. </p>
                         </figcaption>
                       </figure>
                     </div>
@@ -35,9 +32,7 @@ var Main = React.createClass({
                     </div>
                   </div>
                 </section>
-                <h3 className="ma__comp-heading  " id="geographic">
-                  Geographic Data
-                </h3>
+                <Section id="Geographic" {...this.props} index={1}/>
                 <figure className="ma__figure align-left">
                   <img className="ma__image" alt="alt text" src="/assets/images/placeholder/400x300.png" height width />
                   <figcaption className="ma__figure__caption">
@@ -52,9 +47,7 @@ var Main = React.createClass({
                     sed risus neque. Ut a orci ex. Morbi laoreet suscipit tortor at ullamcorper.eu blandit ex hendrerit eget. In non convallis eros. Maecenas consectetur neque a nibh faucibus blandit. Pellentesque malesuada lectus augue, eu blandit ex hendrerit
                     eget. In non convallis eros. Maecenas consectetur neque a nibh faucibus blandit.</p>
                 </section>
-                <h3 className="ma__comp-heading  " id="demographics">
-                  Demographics
-                </h3>
+                <Section id="Demographics" {...this.props} index={2}/>
                 <figure className="ma__figure align-right">
                   <img className="ma__image" alt="alt text" src="/assets/images/placeholder/400x300.png" height width />
                   <figcaption className="ma__figure__caption">
@@ -69,18 +62,7 @@ var Main = React.createClass({
                     sed risus neque. Ut a orci ex. Morbi laoreet suscipit tortor at ullamcorper. eu blandit ex hendrerit eget. In non convallis eros. Maecenas consectetur neque a nibh faucibus blandit. Pellentesque malesuada lectus augue, eu blandit ex hendrerit
                     eget. In non convallis eros. Maecenas consectetur neque a nibh faucibus blandit.</p>
                 </section>
-                <h3 className="ma__comp-heading  " id="prescription">
-                  Prescription Activity
-                </h3>
-                <section className="ma__rich-text js-ma-rich-text">
-                  <ul>
-                    <li>Vestibulum ornare feugiat sodales.</li>
-                    <li>Suspendisse fermentum augue eget semper feugiat. Sed tempor et ipsum semper elementum.</li>
-                    <li>Nulla facilisi.</li>
-                    <li>Ut risus nibh, sodales sit amet mollis pharetra, elementum vitae sapien. Integer quis suscipit dui.</li>
-                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
-                  </ul>
-                </section>
+                <Section id="Prescription" {...this.props} index={3}/>
                 <figure className="ma__figure">
                   <img className="ma__image" alt="alt text" src="/assets/images/placeholder/800x400.png" height width />
                   <figcaption className="ma__figure__caption">
@@ -89,37 +71,7 @@ var Main = React.createClass({
                       the state totals at first). Could be similar to the format for the other map. </p>
                   </figcaption>
                 </figure>
-                <h3 className="ma__comp-heading  " id="emergency">
-                  Emergency Incidents
-                </h3>
-                <section className="ma__rich-text js-ma-rich-text">
-                  <ul>
-                    <li>Vestibulum ornare feugiat sodales.</li>
-                    <li>Suspendisse fermentum augue eget semper feugiat. Sed tempor et ipsum semper elementum.</li>
-                    <li>Nulla facilisi.</li>
-                    <li>Ut risus nibh, sodales sit amet mollis pharetra, elementum vitae sapien. Integer quis suscipit dui.</li>
-                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
-                  </ul>
-                </section>
-                <section className="ma__split-columns">
-                  <div className="ma__split-columns__container">
-                    <div className="ma__split-columns__column">
-                      <section style={{color: '#bbb', minHeight: 200, border: '4px dashed #ddd', fontSize: '2rem', lineHeight: 200, textAlign: 'center'}}>
-                        33%
-                      </section>
-                    </div>
-                    <div className="ma__split-columns__column">
-                      <section style={{color: '#bbb', minHeight: 200, border: '4px dashed #ddd', fontSize: '2rem', lineHeight: 200, textAlign: 'center'}}>
-                        33%
-                      </section>
-                    </div>
-                    <div className="ma__split-columns__column">
-                      <section style={{color: '#bbb', minHeight: 200, border: '4px dashed #ddd', fontSize: '2rem', lineHeight: 200, textAlign: 'center'}}>
-                        33%
-                      </section>
-                    </div>
-                  </div>
-                </section>
+                <Section id="Emergency" {...this.props} index={4}/>
               </div>
               <div className="post-content">
                 <section className="ma__breadcrumbs ma__breadcrumbs--light">

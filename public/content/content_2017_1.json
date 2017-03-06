@@ -1,13 +1,44 @@
-[{
-		"title" : "DPH Opioid Report — 2017 Quarter 1",
-		"paragraph" : "Missoula, MT"
-  },
 {
-    "id": "d823cb4204c9715f5c811feaabeea45ce06736a0",
-    "name": "office"
+  "header" : {
+    "title": "DPH Opioid Report — 2017 Quarter 2",
+    "subtitle": "The Massachusetts Department of Public Health collects overdose death data to track the progression of the opioid crisis and target services to especially hard-hit communities. The data in this report is updated quarterly."
   },
-{
-    "id": "437b3687100bcb77959a5fb6d0351b41972b1173",
-    "name": "common room"
-  }
-]
+  "body" :[
+    {
+      "description": "overview of the report goes here",
+      "paragraph": [
+        "Bar/line chart combo with “Year” and “Month” buttons above them. Count and death rate would appear as a tooltip when you hover.",
+        "Multi-line chart similar to what is in the quarterly report. Tooltip would have percentage totals for each quarter when you hover."
+      ]
+    },
+    {
+      "description": "overview of the geographic data report goes here",
+      "paragraph": [
+        "Suspendisse non tempus justo. Pellentesque malesuada lectus augue, eu blandit ex hendrerit eget. In non convallis eros. Maecenas consectetur neque a nibh faucibus blandit. In quis urna sollicitudin, dictum sapien sit amet, rutrum metus. Donec sed risus neque. Ut a orci ex. Morbi laoreet suscipit tortor at ullamcorper.eu blandit ex hendrerit eget. In non convallis eros. Maecenas consectetur neque a nibh faucibus blandit. Pellentesque malesuada lectus augue, eu blandit ex hendrerit eget. In non convallis eros. Maecenas consectetur neque a nibh faucibus blandit.",
+        "Tri-slider/scale showing the percentage of deaths broken down among the groups in each category (gender, age, and race). Also, it’s possible to add in the comparison to all deaths chart they have for each element in the QR."
+      ]
+    },
+    {
+      "description": "overview of the demographics goes here",
+      "paragraph": [
+        "Tri-slider/scale showing the percentage of deaths broken down among the groups in each category (gender, age, and race). Also, it’s possible to add in the comparison to all deaths chart they have for each element in the QR.",
+        "Tri-slider/scale showing the percentage of deaths broken down among the groups in each category (gender, age, and race). Also, it’s possible to add in the comparison to all deaths chart they have for each element in the QR."
+      ]
+    },
+    {
+      "description": "overview of the prescription goes here",
+      "paragraph": [
+        "Tri-slider/scale showing the percentage of deaths broken down among the groups in each category (gender, age, and race). Also, it’s possible to add in the comparison to all deaths chart they have for each element in the QR.",
+        "Tri-slider/scale showing the percentage of deaths broken down among the groups in each category (gender, age, and race). Also, it’s possible to add in the comparison to all deaths chart they have for each element in the QR."
+      ]
+    },
+    {
+      "description": "overview of the emergency incidents goes here",
+      "paragraph": [
+        "County heat map with the percentages. Tooltip would have numeric value when you hover. There’s a lot of other info in that table that could be put into a sidebar and would be active if you click or search for a county (it could default to the state totals at first). Could be similar to the format for the other map.",
+        "Tri-slider/scale showing the percentage of deaths broken down among the groups in each category (gender, age, and race). Also, it’s possible to add in the comparison to all deaths chart they have for each element in the QR."
+      ]
+    }
+  ]
+
+}

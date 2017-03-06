@@ -1,8 +1,14 @@
 import React from 'react';
 
 var Header = React.createClass({
-
+  propTypes: {  //propTypes and React.PropTypes have diff capitalizations
+    qr:   React.PropTypes.string.isRequired,
+    yr:     React.PropTypes.string.isRequired,
+    title:  React.PropTypes.string.isRequired,   //boollean is abbrev.
+    subtitle:     React.PropTypes.string.isRequired
+  },
   render: function(){
+
       return(
         <header className="ma__illustrated-header">
                 <div className="ma__illustrated-header__container">
@@ -15,7 +21,7 @@ var Header = React.createClass({
                         <h1 className="ma__page-header__title">{this.props.title}</h1>
                         <div className="ma__page-header__intro">
                           <section className="ma__rich-text js-ma-rich-text">
-                            <p>The Massachusetts Department of Public Health collects overdose death data to track the progression of the opioid crisis and target services to especially hard-hit communities. The data in this report is updated quarterly.{this.props.subtitle}</p>
+                            <p>{this.props.subtitle}</p>
                           </section>
                         </div>
                       </div>

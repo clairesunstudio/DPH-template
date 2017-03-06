@@ -23,8 +23,8 @@ export default React.createClass({
           <li><NavLink to="/repos/2017/2">Last Quarter</NavLink></li>
           <li>
             <form onSubmit={this.handleSubmit}>
-              <input type="number" min="2015" max="2017" val="2017" placeholder="year"/> / {' '}
-              <input type="number" min="1" max="4" val="4" placeholder="quarter"/>{' '}
+              <input type="number" min="2016" max="2017" val="2017" placeholder="year"/> / {' '}
+              <input type="number" min="1" max="4" val="1" placeholder="quarter"/>{' '}
               <button class="ma__button-alt ma__button-alt--small" type="submit">View</button>
             </form>
           </li>

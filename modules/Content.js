@@ -13,6 +13,9 @@ export default React.createClass({
       year: this.props.params.year,
       quarter: this.props.params.quarter,
       title: [],
+      subtitle: [],
+      content: [],
+      header: [],
       paragraph: []
     }
   },
@@ -41,9 +44,13 @@ fetchContent(){
     axios
       .get('../../content/content_'+this.props.params.year+'_'+this.props.params.quarter+'.json')
       .then(function(result) {
+        // var myObject = JSON.parse(result.data);
           _this.setState({
-            title: result.data[0].title,
-            paragraph: result.data[0].paragraph
+            content: result.data,
+            header: result.data.header,
+            title: result.data.header.title,
+            subtitle: result.data.header.subtitle,
+            paragraph: result.data.body
           });
       }) // chain api calls to obtain ALL data needed
 },
@@ -54,13 +61,13 @@ componentWillUnmount: function() {
 },
 
   render() {
-    var {year, quarter, title, paragraph} = this.state;
-    //const { year, quarter } = this.props.params;
+    var {year, quarter, title, subtitle, content, header, paragraph} = this.state;
+
     return (
 
 <div>
-<Header yr={year} qr={quarter} title={title} subtitle={paragraph}/>
-<Main paragraph={paragraph}/>
+<Header yr={year} qr={quarter} title={title} subtitle={subtitle}/>
+<Main content={content} paragraph={paragraph}/>
 <Footer />
 </div>
     )
