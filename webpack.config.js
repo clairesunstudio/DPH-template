@@ -8,7 +8,8 @@ module.exports = {
     filename: 'bundle.js',
     publicPath: '/'
   },
-
+  debug: true,
+  devtool: "#eval-source-map",
   plugins: process.env.NODE_ENV === 'production' ? [
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.OccurrenceOrderPlugin(),
