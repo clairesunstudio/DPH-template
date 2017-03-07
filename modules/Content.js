@@ -12,11 +12,11 @@ export default React.createClass({
     return {
       year: this.props.params.year,
       quarter: this.props.params.quarter,
-      title: [],
-      subtitle: [],
-      content: [],
-      header: [],
-      paragraph: []
+      title: "",
+      subtitle: "",
+      content: {},
+      header: "",
+      paragraphs: []
     }
   },
 
@@ -50,7 +50,7 @@ fetchContent(){
             header: result.data.header,
             title: result.data.header.title,
             subtitle: result.data.header.subtitle,
-            paragraph: result.data.body
+            paragraphs: result.data.body
           });
       }) // chain api calls to obtain ALL data needed
 },
@@ -61,15 +61,13 @@ componentWillUnmount: function() {
 },
 
   render() {
-    var {year, quarter, title, subtitle, content, header, paragraph} = this.state;
-
+    const {year, quarter, title, subtitle, content, header, paragraphs} = this.state;
     return (
-
-<div>
-<Header yr={year} qr={quarter} title={title} subtitle={subtitle}/>
-<Main content={content} paragraph={paragraph}/>
-<Footer />
-</div>
+      <div>
+      <Header yr={year} qr={quarter} title={title} subtitle={subtitle}/>
+      <Main content={content} paragraphs={paragraphs}/>
+      <Footer />
+      </div>
     )
   }
 })
