@@ -21,8 +21,11 @@ var Main = React.createClass({
                   <Figure image="/assets/images/placeholder/400x300.png"/>
                   <Paragraph {...this.props} index={0} />
                 </SplitColumns>
+                <div id="death-all-month-chart"></div>
 
                 <Section id="Geographic Data"/>
+                <Paragraph {...this.props} index={1} />
+                <Figure image="/assets/images/placeholder/400x300.png" align="align-right"/>
                 <Paragraph {...this.props} index={1} />
 
                 <Section id="Demographics"/>
