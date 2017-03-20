@@ -1,0 +1,107 @@
+[{
+        "Month": "Jan. 2015",
+        "Confirmed": 355,
+        "Estimated": 0
+    },
+    {
+        "Month": "Feb. 2015",
+        "Confirmed": 486,
+        "Estimated": 0
+    },
+    {
+        "Month": "Mar. 2015",
+        "Year": 2015,
+        "Confirmed": 505,
+        "Estimated": 0
+    },
+    {
+        "Month": "Apr. 2015",
+        "Confirmed": 587,
+        "Estimated": 0
+    },
+    {
+        "Month": "May 2015",
+        "Confirmed": 494,
+        "Estimated": 0
+    },
+    {
+        "Month": "June 2015",
+        "Confirmed": 554,
+        "Estimated": 0
+    },
+    {
+        "Month": "July 2015",
+        "Confirmed": 635,
+        "Estimated": 0
+    },
+    {
+        "Month": "Aug. 2015",
+        "Confirmed": 617,
+        "Estimated": 0
+    },
+    {
+        "Month": "Sept. 2015",
+        "Confirmed": 587,
+        "Estimated": 0
+    },
+    {
+        "Month": "Oct. 2015",
+        "Confirmed": 610,
+        "Estimated": 0
+    },
+    {
+        "Month": "Nov. 2015",
+        "Confirmed": 532,
+        "Estimated": 0
+    },
+    {
+        "Month": "Dec. 2015",
+        "Confirmed": 613,
+        "Estimated": 0
+    },
+    {
+        "Month": "Jan. 2016",
+        "Confirmed": 355,
+        "Estimated": 0
+    },
+    {
+        "Month": "Feb. 2016",
+        "Confirmed": 486,
+        "Estimated": 0
+    },
+    {
+        "Month": "Mar. 2016",
+        "Confirmed": 505,
+        "Estimated": 0
+    },
+    {
+        "Month": "Apr. 2016",
+        "Confirmed": 174,
+        "Estimated": 13
+    },
+    {
+        "Month": "May 2016",
+        "Confirmed": 147,
+        "Estimated": 11
+    },
+    {
+        "Month": "June 2016",
+        "Confirmed": 137,
+        "Estimated": 18
+    },
+    {
+        "Month": "July 2016",
+        "Confirmed": 83,
+        "Estimated": 91
+    },
+    {
+        "Month": "Aug. 2016",
+        "Confirmed": 16,
+        "Estimated": 135
+    },
+    {
+        "Month": "Sept. 2016",
+        "Confirmed": 4,
+        "Estimated": 172
+    }
+]
