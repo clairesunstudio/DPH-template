@@ -21,7 +21,7 @@
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-router": "^2.0.0",
-    "recharts": "^0.21.2",
+    "recharts": "git+https://github.com/clairesunstudio/rechart-custom-package.git",
     "superagent": "^3.5.0",
     "url-loader": "^0.5.8"
   },
