@@ -64,8 +64,7 @@ export default React.createClass({
     },
 
     componentWillUnmount: function() {
-        this.ignoreLastFetch = true,
-            this.serverRequest.abort()
+        this.ignoreLastFetch = true
     },
 
     render() {
