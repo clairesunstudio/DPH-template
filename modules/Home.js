@@ -1,6 +1,7 @@
 import React from 'react'
 import NavLink from './NavLink'
 import Search from './Search'
+import Logo from './Logo'
 
 export default React.createClass({
   contextTypes: {
@@ -21,11 +22,7 @@ export default React.createClass({
 
       <main id="main-content" className="ma__narrow-template ma__narrow-template--left ma__narrow-template--green" tabIndex={-1}>
               <header className="ma__narrow-template__header">
-                <div className="ma__site-logo">
-                  <a href="/" title="Mass Gov home page">
-                    <img src="/assets/images/stateseal.png" alt="Mass Gov" width={75} height={75} />
-                  </a>
-                </div>
+                <Logo />
               </header>
               <div className="ma__narrow-template__container ">
                 <div className="ma__narrow-template__content">

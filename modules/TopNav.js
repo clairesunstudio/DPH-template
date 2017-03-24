@@ -1,6 +1,7 @@
 import React from 'react'
 import Search from './Search'
 import NavLink from './NavLink'
+import Logo from './Logo'
 
 var TopNav = React.createClass({
   render: function(){
@@ -9,11 +10,7 @@ var TopNav = React.createClass({
               <header className="ma__header">
                 <div className="ma__header__container">
                   <div className="ma__header__logo">
-                    <div className="ma__site-logo">
-                      <a href="/" title="Mass Gov home page">
-                        <img src="/assets/images/stateseal.png" alt="Mass Gov" width={75} height={75} />
-                      </a>
-                    </div>
+                    <Logo />
                   </div>
                   <div className="ma__header__search js-header-search-menu">
                     <Search {...this.props} />

@@ -51,10 +51,7 @@ var Main = React.createClass({
 
                 <Section id="Overview"/>
                 <Paragraph {...this.props} index={0} />
-                <SplitColumns {...this.props} image="/assets/images/placeholder/400x300.png">
-                  <Figure image="/assets/images/placeholder/400x300.png"/>
-                  <Paragraph {...this.props} index={0} />
-                </SplitColumns>
+
 
 
                <GraphTitle>All Intent Opioid-Related Deaths of Massachusetts Residents 2015-2016</GraphTitle>
@@ -115,6 +112,11 @@ var Main = React.createClass({
                 <Paragraph {...this.props} index={1} />
                 <Figure image="/assets/images/placeholder/400x300.png" align="align-right"/>
                 <Paragraph {...this.props} index={1} />
+                
+                <SplitColumns {...this.props} image="/assets/images/placeholder/400x300.png">
+                  <Figure image="/assets/images/placeholder/400x300.png"/>
+                  <Paragraph {...this.props} index={0} />
+                </SplitColumns>
 
                 <Section id="Demographics"/>
                 <Paragraph {...this.props} index={2} />
