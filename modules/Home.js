@@ -1,5 +1,6 @@
 import React from 'react'
 import NavLink from './NavLink'
+import Search from './Search'
 
 export default React.createClass({
   contextTypes: {
@@ -26,22 +27,18 @@ export default React.createClass({
                   </a>
                 </div>
               </header>
-              <div className="ma__narrow-template__container">
+              <div className="ma__narrow-template__container ">
                 <div className="ma__narrow-template__content">
                   <section className="ma__error-page">
                     <div className="ma__error-page__label" />
-                    <h1 className="ma__error-page__title">DPH Quarterly Report</h1>
-                    <h2 className="ma__error-page__message">The Massachusetts Department of Public Health collects overdose death data to track the progression of the opioid crisis and target services to especially hard-hit communities. The data in this report is updated quarterly.</h2>
+                    <h1>DPH Quarterly Report</h1>
+                    <p>The Massachusetts Department of Public Health collects overdose death data to track the progression of the opioid crisis and target services to especially hard-hit communities. The data in this report is updated quarterly.</p>
                     <ul role="nav">
-                      <li className="ma__main-nav__item js-main-nav-toggle"><NavLink className="ma__main-nav__top-link" to="/" onlyActiveOnIndex>Home</NavLink></li>
                       <li className="ma__main-nav__item js-main-nav-toggle"><NavLink className="ma__main-nav__top-link" to="/repos/2017/3">Newest Report</NavLink></li>
                       <li className="ma__main-nav__item js-main-nav-toggle"><NavLink className="ma__main-nav__top-link" to="/repos/2017/2">Last Quarter</NavLink></li>
                     </ul>
-                    <form onSubmit={this.handleSubmit}>
-                      <input type="number" min="2016" max="2017" placeholder="year"/> / {' '}
-                      <input type="number" min="1" max="4" placeholder="quarter"/>{' '}
-                      <button className="ma__button-alt ma__button-alt--small" type="submit">View</button>
-                    </form>
+
+                    <Search onSubmit={this.handleSubmit}/>
                   </section>
 
                   </div>
