@@ -16,7 +16,6 @@ var Main = React.createClass({
   render: function(){
     const getPercent = (value, total) => {
         const ratio = total > 0 ? value / total : 0;
-
         return toPercent(ratio, 2);
     };
 
@@ -77,10 +76,10 @@ var Main = React.createClass({
                     <CartesianGrid strokeDasharray="3 3"/>
                     <Tooltip/>
                     <Legend/>
-                    <Line dataKey="Both Fentanyl & Heroin" stroke={color.grey} />
-                    <Line dataKey="Only Fentanyl" stroke={color.red} activeDot={{r: 8}}/>
-                    <Line dataKey="Only Heroin" stroke={color.blue}/>
-                    <Line dataKey="Only Methadone" stroke={color.grey} strokeDasharray="5 5"/>
+                    <Line dataKey="Both Fentanyl & Heroin" formatter={toPercent} stroke={color.grey} />
+                    <Line dataKey="Only Fentanyl" formatter={toPercent} stroke={color.red} activeDot={{r: 8}}/>
+                    <Line dataKey="Only Heroin" formatter={toPercent} stroke={color.blue}/>
+                    <Line dataKey="Only Methadone" formatter={toPercent} stroke={color.grey} strokeDasharray="5 5"/>
                   </LineChart>
                 </ResponsiveContainer>
 
