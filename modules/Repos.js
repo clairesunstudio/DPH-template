@@ -1,6 +1,7 @@
 import React from 'react'
 import NavLink from './NavLink'
 import Search from './Search'
+import TopNav from './TopNav'
 
 export default React.createClass({
   contextTypes: {
@@ -18,12 +19,7 @@ export default React.createClass({
   render() {
     return (
       <div>
-            <ul>
-              <li className="ma__main-nav__item js-main-nav-toggle"><NavLink className="ma__main-nav__top-link" to="/">Home</NavLink></li>
-              <li className="ma__main-nav__item js-main-nav-toggle"><NavLink className="ma__main-nav__top-link" to="/repos/2017/3">Newest</NavLink></li>
-              <li className="ma__main-nav__item js-main-nav-toggle"><NavLink className="ma__main-nav__top-link" to="/repos/2017/2">Last Quarter</NavLink></li>
-              <Search onSubmit={this.handleSubmit}/>
-            </ul>
+      <TopNav onSubmit={this.handleSubmit}/>
         {this.props.children}
       </div>
     )
