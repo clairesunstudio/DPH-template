@@ -2,7 +2,10 @@ var webpack = require('webpack')
 
 module.exports = {
   entry: './index.js',
-
+  devServer: {
+      inline:true,
+      port: 7000
+    },
   output: {
     path: 'public',
     filename: 'bundle.js',
