@@ -3,6 +3,7 @@ import axios from 'axios'
 import Header from './Header'
 import Main from './Main'
 import Footer from './Footer'
+import NotFound from './NotFound'
 
 export default React.createClass({
     getInitialState: function() {
@@ -28,7 +29,7 @@ export default React.createClass({
             let oldId = prevProps.params
             let newId = this.props.params
             if (newId !== oldId)
-                this.fetchContent()
+            this.fetchContent()
         },
 
         fetchContent() {
@@ -52,7 +53,9 @@ export default React.createClass({
                         data_line_drug: line_drug.data,
                         data_line_ma: line_ma.data
                     });
-                }));
+                }))
+                .catch((error) => {console.log(error)})
+
         },
 
         componentWillUnmount: function() {
@@ -85,7 +88,7 @@ export default React.createClass({
 
         renderLoader() {
           return (
-             <p>Loading...</p>
+            <NotFound />
           )
         }
 
