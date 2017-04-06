@@ -1,6 +1,4 @@
 import React from 'react'
-import NavLink from './NavLink'
-import Search from './Search'
 import TopNav from './TopNav'
 
 export default React.createClass({
