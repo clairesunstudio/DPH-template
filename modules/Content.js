@@ -8,11 +8,11 @@ import NotFound from './NotFound'
 export default React.createClass({
     getInitialState: function() {
         return {
-            title: "",
-            subtitle: "",
-            content: {},
-            header: "",
-            paragraphs: [],
+            title: null,
+            subtitle: null,
+            content: null,
+            header: null,
+            paragraphs: null,
             data_bar_all: [],
             data_bar_unintent: [],
             data_line_drug: [],
@@ -64,7 +64,7 @@ export default React.createClass({
 
         render() {
             const {paragraphs} = this.state;
-            return (paragraphs.length > 0) ? this.renderContent() : this.renderLoader();
+            return (paragraphs) ? this.renderContent() : this.renderLoader();
         },
 
         renderContent() {
