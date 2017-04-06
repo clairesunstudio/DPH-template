@@ -10,7 +10,7 @@ var Paragraph = React.createClass({
   },
   render: function(){
     const obj = this.props.paragraphs[this.props.index];
-     console.log(obj);
+
 
     var paragraphList;
     if (obj){

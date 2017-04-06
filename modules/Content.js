@@ -7,8 +7,6 @@ import Footer from './Footer'
 export default React.createClass({
     getInitialState: function() {
         return {
-            year: this.props.params.year,
-            quarter: this.props.params.quarter,
             title: "",
             subtitle: "",
             content: {},
@@ -22,22 +20,16 @@ export default React.createClass({
     },
 
 
-    componentDidMount: function() {
+    componentWillMount: function() {
         this.fetchContent()
     },
 
     componentDidUpdate(prevProps) {
-        // respond to parameter change in scenario 3
         let oldId = prevProps.params
         let newId = this.props.params
         if (newId !== oldId)
-            this.fetchContent(),
-            this.setState({
-                year: this.props.params.year,
-                quarter: this.props.params.quarter
-            });
+            this.fetchContent()
     },
-
 
     fetchContent() {
         var _this = this;
@@ -68,9 +60,8 @@ export default React.createClass({
     },
 
     render() {
+        const {year,quarter} = this.props.params;
         const {
-            year,
-            quarter,
             title,
             subtitle,
             content,
@@ -82,6 +73,7 @@ export default React.createClass({
             data_line_ma
         } = this.state;
 
+        console.log(paragraphs);
         return (
 
           <div>
