@@ -10,12 +10,8 @@ var Paragraph = React.createClass({
   },
   render: function(){
     const obj = this.props.paragraphs[this.props.index];
-
-
-    var paragraphList;
-    if (obj){
-      paragraphList = obj.paragraphs.map((para,i) => <p key={"para_" + i}>{para}</p>);
-    }
+    var paragraphList = obj.paragraphs.map((para,i) => <p key={"para_" + i}>{para}</p>);
+        console.log(paragraphList);
       return(
           <section className="ma__rich-text js-ma-rich-text">
             {paragraphList}
