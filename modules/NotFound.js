@@ -12,7 +12,7 @@ export default React.createClass({
     event.preventDefault()
     const year = event.target.elements[0].value
     const quarter = event.target.elements[1].value
-    const path = `/repos/${year}/${quarter}`
+    const path = `/${year}/${quarter}`
     this.context.router.push(path)
   },
 
