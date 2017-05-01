@@ -1,4 +1,4 @@
-import React from 'react'
+ import React from 'react'
 import axios from 'axios'
 import Header from './Header'
 import Main from './Main'
@@ -36,10 +36,10 @@ export default React.createClass({
             var _this = this;
             axios.all([
                     axios.get('../../content/content_' + this.props.params.year + '_' + this.props.params.quarter + '.json'),
-                    axios.get('../../data/bar-all-death.json'),
-                    axios.get('../../data/bar-unintent-death.json'),
-                    axios.get('../../data/line-drug-present.json'),
-                    axios.get('../../data/line-ma-unintent.json'),
+                    axios.get('../../data/_' + this.props.params.year + '_' + this.props.params.quarter +'/bar-all-death.json'),
+                    axios.get('../../data/_' + this.props.params.year + '_' + this.props.params.quarter +'/bar-unintent-death.json'),
+                    axios.get('../../data/_' + this.props.params.year + '_' + this.props.params.quarter +'/line-drug-present.json'),
+                    axios.get('../../data/_' + this.props.params.year + '_' + this.props.params.quarter +'/line-ma-unintent.json'),
                 ])
                 .then(axios.spread(function(result, bar_all, bar_unintent, line_drug, line_ma) {
                     _this.setState({
