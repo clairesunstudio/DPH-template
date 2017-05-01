@@ -1,4 +1,5 @@
 import React from 'react';
+import Search from './Search'
 
 var Header = React.createClass({
   propTypes: {  //propTypes and React.PropTypes have diff capitalizations
@@ -7,6 +8,18 @@ var Header = React.createClass({
     title:  React.PropTypes.string.isRequired,   //boollean is abbrev.
     subtitle:     React.PropTypes.string.isRequired
   },
+  contextTypes: {
+    router: React.PropTypes.object
+  },
+
+  handleSubmit(event) {
+    event.preventDefault()
+    const year = event.target.elements[0].value
+    const quarter = event.target.elements[1].value
+    const path = `/${year}/${quarter}`
+    this.context.router.push(path)
+  },
+
   render: function(){
 
       return(
@@ -23,6 +36,7 @@ var Header = React.createClass({
                           <section className="ma__rich-text js-ma-rich-text">
                             <p>{this.props.subtitle}</p>
                           </section>
+                          <Search onSubmit={this.handleSubmit} />
                         </div>
                       </div>
                     </section>
