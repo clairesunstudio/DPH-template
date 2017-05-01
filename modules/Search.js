@@ -9,10 +9,10 @@ var Search = React.createClass({
     return (
         <section className="ma__qr-search">
         <form {...this.props} className="ma__form js-header-search-form">
-          <span className="ma__header-search__input">
+
             <input type="number" min="2016" max="2017" placeholder="year" style={styles.input} required/>
             <input type="number" min="1" max="4" placeholder="quarter" style={styles.input} required/>
-          </span>
+
           <button type="submit" className="ma__button-search">
               <span>View </span>
               <svg id="SvgjsSvg38" xlinkHref="http://www.w3.org/2000/svg" version="1.1" xmlnsXlink="http://www.w3.org/1999/xlink"  width={25} height={25} viewBox="0 0 25 25">

@@ -36,9 +36,10 @@ var Header = React.createClass({
                           <section className="ma__rich-text js-ma-rich-text">
                             <p>{this.props.subtitle}</p>
                           </section>
-                          <Search onSubmit={this.handleSubmit} />
                         </div>
                       </div>
+                        <br />
+                        <Search onSubmit={this.handleSubmit} />
                     </section>
                   </div>
                 </div>

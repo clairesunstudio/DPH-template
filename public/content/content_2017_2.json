@@ -1,14 +1,14 @@
 {
   "header" : {
-    "title": "DPH Opioid Report — 2017 Quarter 2",
+    "title": "DPH Opioid Report",
     "subtitle": "The Massachusetts Department of Public Health collects overdose death data to track the progression of the opioid crisis and target services to especially hard-hit communities. The data in this report is updated quarterly."
   },
   "body" :[
     {
       "description": "overview of the report goes here",
       "paragraphs": [
-        "Bar/line chart combo with “Year” and “Month” buttons above them. Count and death rate would appear as a tooltip when you hover.",
-        "Multi-line chart similar to what is in the quarterly report. Tooltip would have percentage totals for each quarter when you hover."
+        "Vivamus molestie id tellus ac tempus. Suspendisse non volutpat tortor, vel auctor metus. Nulla eget euismod magna. Curabitur vitae pellentesque erat. Mauris placerat elit quam, non accumsan arcu commodo a. Vivamus ultrices luctus elit eget aliquet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam purus massa, vulputate eu nibh a, condimentum mollis elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc hendrerit ante a elit porta tempus. Maecenas porttitor eros vel massa pretium fermentum. Nullam efficitur enim nec dui accumsan porta.",
+        "Aenean interdum pulvinar facilisis. Integer commodo posuere purus. Maecenas vitae ligula enim. Proin porta tellus vel odio pretium malesuada. Donec vitae mi enim. Suspendisse quis aliquet mauris, quis pharetra lorem. Fusce semper vel est imperdiet euismod."
       ]
     },
     {
