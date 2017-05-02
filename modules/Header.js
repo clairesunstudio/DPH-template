@@ -1,5 +1,5 @@
 import React from 'react';
-import Search from './Search'
+import Dropdown from './Dropdown'
 
 var Header = React.createClass({
   propTypes: {  //propTypes and React.PropTypes have diff capitalizations
@@ -11,15 +11,10 @@ var Header = React.createClass({
   contextTypes: {
     router: React.PropTypes.object
   },
-
-  handleSubmit(event) {
-    event.preventDefault()
-    const year = event.target.elements[0].value
-    const quarter = event.target.elements[1].value
-    const path = `/${year}/${quarter}`
-    this.context.router.push(path)
+  handleChange(event) {
+    const serial = event.target.value
+    this.context.router.push(serial)
   },
-
   render: function(){
 
       return(
@@ -39,7 +34,7 @@ var Header = React.createClass({
                         </div>
                       </div>
                         <br />
-                        <Search onSubmit={this.handleSubmit} />
+                        <Dropdown onChange={this.handleChange} />
                     </section>
                   </div>
                 </div>

@@ -1,21 +1,16 @@
 import React from 'react'
 import NavLink from './NavLink'
-import Search from './Search'
 import Logo from './Logo'
+import Dropdown from './Dropdown'
 
 export default React.createClass({
   contextTypes: {
     router: React.PropTypes.object
   },
-
-  handleSubmit(event) {
-    event.preventDefault()
-    const year = event.target.elements[0].value
-    const quarter = event.target.elements[1].value
-    const path = `/${year}/${quarter}`
-    this.context.router.push(path)
+  handleChange(event) {
+    const serial = event.target.value
+    this.context.router.push(serial)
   },
-
   render() {
     return (
       <main id="main-content" className="ma__narrow-template ma__narrow-template--right ma__narrow-template--yellow" tabIndex={-1}>
@@ -28,19 +23,18 @@ export default React.createClass({
                    <div className="ma__error-page__type">404</div>
                    <div className="ma__error-page__label">Oops</div>
                    <h1 className="ma__error-page__title"></h1>
-                   <h2 className="ma__error-page__message">The report that you are looking for doesn&#39;t exist or you didn&#39;t enter the year and quarter correctly. Please try again.</h2>
+                   <h2 className="ma__error-page__message">The report that you are looking for doesn&#39;t exist.</h2>
+                   <Dropdown onChange={this.handleChange} />
                  </section>
-
-                 <Search onSubmit={this.handleSubmit}/>
 
                  <section className="ma__helpful-links ">
                    <h3 className="ma__comp-heading ma__comp-heading--yellow ">
                      Helpful Links
                    </h3>
+
                    <ul className="ma__helpful-links__items">
-                    <li className="ma__helpful-links__item"><NavLink className="ma__content-link ma__content-link--chevron" to="/">Home</NavLink></li>
-                     <li className="ma__helpful-links__item"><NavLink className="ma__content-link ma__content-link--chevron" to="/repos/2017/3">Newest Report</NavLink></li>
-                     <li className="ma__helpful-links__item"><NavLink className="ma__content-link ma__content-link--chevron" to="/repos/2017/2">Last Quarter</NavLink></li>
+                     <li className="ma__helpful-links__item"><NavLink className="ma__content-link ma__content-link--chevron" to="/2017/3">Newest Report</NavLink></li>
+                     <li className="ma__helpful-links__item"><NavLink className="ma__content-link ma__content-link--chevron" to="/2017/2">Previous Quarter</NavLink></li>
                    </ul>
                  </section>  </div>
              </div>
