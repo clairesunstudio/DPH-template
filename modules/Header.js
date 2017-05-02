@@ -8,15 +8,23 @@ var Header = React.createClass({
     title:  React.PropTypes.string.isRequired,   //boollean is abbrev.
     subtitle:     React.PropTypes.string.isRequired
   },
+  getInitialState: function() {
+      return {
+          placeholder: "Select a quarter",
+      }
+  },
   contextTypes: {
     router: React.PropTypes.object
   },
   handleChange(event) {
-    const serial = event.target.value
+    const _this = event.target
+    const serial = _this.value
+    const text = _this[_this.selectedIndex].text
+    this.setState({placeholder: text})
     this.context.router.push(serial)
   },
   render: function(){
-
+    const {placeholder} = this.state;
       return(
         <header className="ma__illustrated-header">
                 <div className="ma__illustrated-header__container">
@@ -34,7 +42,7 @@ var Header = React.createClass({
                         </div>
                       </div>
                         <br />
-                        <Dropdown onChange={this.handleChange} />
+                        <Dropdown onChange={this.handleChange} placeholder = {placeholder} />
                     </section>
                   </div>
                 </div>

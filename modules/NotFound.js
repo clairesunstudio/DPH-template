@@ -4,14 +4,23 @@ import Logo from './Logo'
 import Dropdown from './Dropdown'
 
 export default React.createClass({
+  getInitialState: function() {
+      return {
+          placeholder: "Select a quarter",
+      }
+  },
   contextTypes: {
     router: React.PropTypes.object
   },
   handleChange(event) {
-    const serial = event.target.value
+    const _this = event.target
+    const serial = _this.value
+    const text = _this[_this.selectedIndex].text
+    this.setState({placeholder: text})
     this.context.router.push(serial)
   },
   render() {
+    const {placeholder} = this.state;
     return (
       <main id="main-content" className="ma__narrow-template ma__narrow-template--right ma__narrow-template--yellow" tabIndex={-1}>
              <header className="ma__narrow-template__header">
@@ -24,7 +33,7 @@ export default React.createClass({
                    <div className="ma__error-page__label">Oops</div>
                    <h1 className="ma__error-page__title"></h1>
                    <h2 className="ma__error-page__message">The report that you are looking for doesn&#39;t exist.</h2>
-                   <Dropdown onChange={this.handleChange} />
+                   <Dropdown onChange={this.handleChange} placeholder = {placeholder} />
                  </section>
 
                  <section className="ma__helpful-links ">
