@@ -1,6 +1,6 @@
 import React from 'react'
 
-var Search = React.createClass({
+var Dropdown = React.createClass({
   propTypes: {  //propTypes and React.PropTypes have diff capitalizations
     placeholder:   React.PropTypes.string.isRequired,
   },
@@ -27,4 +27,4 @@ var Search = React.createClass({
 
 })
 
-module.exports = Search;
+module.exports = Dropdown;
