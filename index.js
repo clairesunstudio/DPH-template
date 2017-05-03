@@ -1,17 +1,10 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
-import { Router, Route, browserHistory, IndexRedirect } from 'react-router'
-import App from './modules/App'
-import Content from './modules/Content'
-import NotFound from './modules/NotFound'
+import { render } from 'react-dom'
+import { Router, browserHistory } from 'react-router'
+// import routes and pass them into <Router/>
+import routes from './modules/routes'
 
-
-ReactDOM.render((
-  <Router history={browserHistory}>
-    <Route path="/" component={App}>
-      <IndexRedirect to="/2017/3" />
-        <Route name="report" path="/:year/:quarter" component={Content}/>
-      <Route path="*" component={NotFound} />
-    </Route>
-  </Router>
-), document.getElementById('app'))
+render(
+  <Router routes={routes} history={browserHistory}/>,
+  document.getElementById('app')
+)
