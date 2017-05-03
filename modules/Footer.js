@@ -1,6 +1,7 @@
 import React from 'react'
 import SocialMedia from './SocialMedia'
 import Logo from './Logo'
+import FooterLinks from './FooterLinks'
 
 
 var Footer = React.createClass({
@@ -9,56 +10,9 @@ var Footer = React.createClass({
             <footer className="ma__footer js-footer" id="footer">
   <div className="ma__footer__container">
     <div className="ma__footer__nav">
-      <section className="ma__footer-links">
-        <nav role="navigation" aria-labeledby>
-          <h2 className="visually-hidden" id>FooterLinks1</h2>
-          <ul className="ma__footer-links__items">
-            <li className="ma__footer-links__item">
-              <a href="#" className="ma__footer-links__link">Living</a>
-            </li>
-            <li className="ma__footer-links__item">
-              <a href="#" className="ma__footer-links__link">Working</a>
-            </li>
-            <li className="ma__footer-links__item">
-              <a href="#" className="ma__footer-links__link">Learning</a>
-            </li>
-            <li className="ma__footer-links__item">
-              <a href="#" className="ma__footer-links__link">Visiting &amp; Exploring</a>
-            </li>
-            <li className="ma__footer-links__item">
-              <a href="#" className="ma__footer-links__link">Your Government</a>
-            </li>
-          </ul>
-        </nav>
-        <nav role="navigation" aria-labeledby>
-          <h2 className="visually-hidden" id>FooterLinks2</h2>
-          <ul className="ma__footer-links__items">
-            <li className="ma__footer-links__item">
-              <a href="#" className="ma__footer-links__link">Contact Us</a>
-            </li>
-            <li className="ma__footer-links__item">
-              <a href="#" className="ma__footer-links__link">State Data</a>
-            </li>
-            <li className="ma__footer-links__item">
-              <a href="#" className="ma__footer-links__link">Feedback</a>
-            </li>
-          </ul>
-        </nav>
-        <nav role="navigation" aria-labeledby>
-          <h2 className="visually-hidden" id>FooterLinks3</h2>
-          <ul className="ma__footer-links__items">
-            <li className="ma__footer-links__item">
-              <a href="#" className="ma__footer-links__link">Sitemap</a>
-            </li>
-            <li className="ma__footer-links__item">
-              <a href="#" className="ma__footer-links__link">Disclaimer</a>
-            </li>
-            <li className="ma__footer-links__item">
-              <a href="#" className="ma__footer-links__link">Site Policies</a>
-            </li>
-          </ul>
-        </nav>
-      </section>
+      <FooterLinks>
+        {this.props.children}
+      </FooterLinks>
     </div>
     <section className="ma__footer__info">
       <Logo class={"ma__footer__logo"} width={120} height={120}/>
