@@ -17,11 +17,16 @@ var Header = React.createClass({
     router: React.PropTypes.object
   },
   handleChange(event) {
+    event.preventDefault()
     const _this = event.target
     const serial = _this.value
-    const text = _this[_this.selectedIndex].text
-    this.setState({placeholder: text})
-    this.context.router.push(serial)
+    if(serial==="older"){
+      window.open('http://www.mass.gov/eohhs/gov/departments/dph/stop-addiction/current-statistics.html','_blank')
+    }else{
+      const text = _this[_this.selectedIndex].text
+      this.setState({placeholder: text})
+      this.context.router.push(serial)
+    }
   },
   render: function(){
     const {placeholder} = this.state;
