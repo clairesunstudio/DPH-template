@@ -24,7 +24,7 @@ export default React.createClass({
     return (
       <main id="main-content" className="ma__narrow-template ma__narrow-template--right ma__narrow-template--yellow" tabIndex={-1}>
              <header className="ma__narrow-template__header">
-                <Logo />
+                <Logo class={"ma__site-logo"} width={70} height={70}/>
              </header>
              <div className="ma__narrow-template__container">
                <div className="ma__narrow-template__content">
