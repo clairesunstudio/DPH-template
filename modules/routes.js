@@ -9,7 +9,7 @@ import NotFound from './NotFound'
 module.exports = (
   <Router history={browserHistory}>
     <Route path="/" component={App}>
-      <IndexRedirect to="/2017/3" />
+      <Route path="/" />
       <Route name="report" path="/:year/:quarter" component={Content}/>
       <Route path="*" component={NotFound} />
     </Route>

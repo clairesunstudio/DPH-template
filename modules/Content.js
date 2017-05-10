@@ -1,4 +1,4 @@
- import React from 'react'
+import React from 'react'
 import axios from 'axios'
 import Header from './Header'
 import Main from './Main'
@@ -20,6 +20,15 @@ export default React.createClass({
         }
     },
 
+    makeMyRoot(){
+           var myUrl = window.location.href
+           var arr = myUrl.split('/')
+           var myRoot = arr[0] + "//" + arr[2] + "/"
+           var subdir = arr[3] || ""
+           myRoot += subdir + "/"
+           console.log(this.props.params)
+           return myRoot
+       },
 
     componentWillMount: function() {
             this.fetchContent()
@@ -29,17 +38,20 @@ export default React.createClass({
             let oldId = prevProps.params
             let newId = this.props.params
             if (newId !== oldId)
-            this.fetchContent()
+
+            this.fetchContent(this.makeMyRoot())
+
+
         },
 
-        fetchContent() {
+        fetchContent(root) {
             var _this = this;
             axios.all([
-                    axios.get('../../content/content_' + this.props.params.year + '_' + this.props.params.quarter + '.json'),
-                    axios.get('../../data/_' + this.props.params.year + '_' + this.props.params.quarter +'/bar-all-death.json'),
-                    axios.get('../../data/_' + this.props.params.year + '_' + this.props.params.quarter +'/bar-unintent-death.json'),
-                    axios.get('../../data/_' + this.props.params.year + '_' + this.props.params.quarter +'/line-drug-present.json'),
-                    axios.get('../../data/_' + this.props.params.year + '_' + this.props.params.quarter +'/line-ma-unintent.json'),
+                    axios.get(root+'/content/content_' + this.props.params.year + '_' + this.props.params.quarter + '.json'),
+                    axios.get(root+'/data/_' + this.props.params.year + '_' + this.props.params.quarter +'/bar-all-death.json'),
+                    axios.get(root+'/data/_' + this.props.params.year + '_' + this.props.params.quarter +'/bar-unintent-death.json'),
+                    axios.get(root+'/data/_' + this.props.params.year + '_' + this.props.params.quarter +'/line-drug-present.json'),
+                    axios.get(root+'/data/_' + this.props.params.year + '_' + this.props.params.quarter +'/line-ma-unintent.json'),
                 ])
                 .then(axios.spread(function(result, bar_all, bar_unintent, line_drug, line_ma) {
                     _this.setState({

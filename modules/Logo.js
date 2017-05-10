@@ -10,7 +10,7 @@ var Logo = React.createClass({
     return (
       <div className={this.props.class}>
         <a href="http://pilot.mass.gov" title="Mass Gov home page">
-          <img src="/assets/images/stateseal.png" alt="Massachusetts State Seal" width={this.props.width} height={this.props.height} />
+          <img src="assets/images/stateseal.png" alt="Massachusetts State Seal" width={this.props.width} height={this.props.height} />
         </a>
       </div>
     )
