@@ -8,11 +8,10 @@ var Dropdown = React.createClass({
     var myUrl = window.location.href
     myUrl = myUrl.substring(0,myUrl.lastIndexOf("/"))
     var arr = myUrl.split('/')
-    var myRoot = arr[0] + "//" + arr[2] + "/"
     var subdir = arr[3] || ""
-    if (arr[3]){
-           myRoot += subdir + "/"
-       }
+    if (arr[3]==="dphopioidqr"){
+           var myRoot = subdir + "/";
+       }else {myRoot = ''}
 
     console.log(myRoot)
 
@@ -21,9 +20,9 @@ var Dropdown = React.createClass({
              <label htmlFor="color-select" className="ma__select-box__label">View other quarterly reports</label>
              <div className="ma__select-box__field">
                <select className="ma__select-box__select">
-                  <option value={`${myRoot}2017/3`}>Q3 2017</option>
-                  <option value={`${myRoot}2017/2`}>Q2 2017</option>
-                  <option value={`${myRoot}2017/1`}>Q1 2017</option>
+                  <option value={`2017/3`}>Q3 2017</option>
+                  <option value={`2017/2`}>Q2 2017</option>
+                  <option value={`2017/1`}>Q1 2017</option>
                   <option value="older">Older</option>
                </select>
                <div className="ma__select-box__link">
