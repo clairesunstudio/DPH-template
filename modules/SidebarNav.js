@@ -195,7 +195,6 @@ var SidebarNav = React.createClass({
     };
   },
   render: function(){
-    console.log(scrollAnchors)
       return(
         <nav className="ma__action-details__anchor-links js-scroll-anchors" aria-labelledby="page_contents">
           <h3 className="visually-hidden" id="page_contents">Page Contents</h3>

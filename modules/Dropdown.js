@@ -8,12 +8,17 @@ var Dropdown = React.createClass({
     var myUrl = window.location.href
     myUrl = myUrl.substring(0,myUrl.lastIndexOf("/"))
     var arr = myUrl.split('/')
-    var subdir = arr[3] || ""
-    if (arr[3]==="dphopioidqr"){
-           var myRoot = subdir + "/";
-       }else {myRoot = ''}
+    var myRoot, subdir
+    if (arr[3]!=="dphopioidqr"){
+          subdir = ''
+          myRoot = ''
+          console.log("local");
+    } else {
+      subdir = arr[3] || ""
+      myRoot = subdir + "/";
+      console.log(myRoot)}
 
-    console.log(myRoot)
+
 
     return (
       <section {...this.props} className="ma__select-box">

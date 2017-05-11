@@ -24,13 +24,15 @@ export default React.createClass({
       var myUrl = window.location.href
       myUrl = myUrl.substring(0,myUrl.lastIndexOf("/"))
       var arr = myUrl.split('/')
-      var myRoot = arr[0] + "//" + arr[2] + "/"
-      var subdir = arr[3] || ""
-      if (arr[3]==="dphopioidqr"){
-             myRoot += subdir + "/";
+      var myRoot, subdir
+      if (arr[3]!=="dphopioidqr"){
+          myRoot = arr[0] + "//" + arr[2] + "/"
+         }else {
+           subdir = arr[3] || ""
+           myRoot += subdir + "/";
          }
-
            return myRoot
+           console.log(myRoot)
        },
 
     componentWillMount: function() {
@@ -49,7 +51,6 @@ export default React.createClass({
 
         fetchContent(root) {
             var _this = this;
-            console.log(root)
             axios.all([
                     axios.get(root+'/content/content_' + this.props.params.year + '_' + this.props.params.quarter + '.json'),
                     axios.get(root+'/data/_' + this.props.params.year + '_' + this.props.params.quarter +'/bar-all-death.json'),
