@@ -153,6 +153,7 @@ var SidebarNav = React.createClass({
 
           if(isMobile){
             $elParent.css({'paddingTop':elHeight});
+            $el.css({'top': 0});
           }
         }
         else if (bottom) {
