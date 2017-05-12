@@ -5,13 +5,17 @@ import App from './App'
 import Content from './Content'
 import NotFound from './NotFound'
 
+const publicPath = '/dphopioidqr';
 
+export const routeCodes = {
+  HOME: `${ publicPath }/2017/3`,
+  CONTENT: `${ publicPath }/:year/:quarter`,
+  NOTFOUND: `${ publicPath }*`,
+};
 module.exports = (
   <Router history={browserHistory}>
-    <Route path="/" component={App}>
-      <IndexRedirect to="/2017/3" />
-      <Route name="report" path="/:year/:quarter" component={Content}/>
-      <Route path="*" component={NotFound} />
-    </Route>
+      <IndexRedirect to={routeCodes.HOME} />
+      <Route name="report" path={routeCodes.CONTENT} component={Content}/>
+      <Route path={routeCodes.NOTFOUND} component={NotFound} />
   </Router>
 )

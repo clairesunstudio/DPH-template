@@ -9,7 +9,7 @@ module.exports = {
   output: {
     path: 'public',
     filename: 'bundle.js',
-    publicPath: '/'
+    publicPath: '/dphopioidqr/'
   },
   debug: true,
   devtool: "#eval-source-map",
