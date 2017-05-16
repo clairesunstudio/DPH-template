@@ -42,7 +42,7 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -99,27 +99,27 @@
 	  console.log('Production Express server running at localhost:' + PORT);
 	});
 
-/***/ },
+/***/ }),
 /* 1 */
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
 
 	module.exports = require("react");
 
-/***/ },
+/***/ }),
 /* 2 */
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
 
 	module.exports = require("react-dom/server");
 
-/***/ },
+/***/ }),
 /* 3 */
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
 
 	module.exports = require("react-router");
 
-/***/ },
+/***/ }),
 /* 4 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -133,33 +133,68 @@
 
 	var _reactRouter = __webpack_require__(3);
 
-	var _Content = __webpack_require__(6);
+	var _App = __webpack_require__(6);
+
+	var _App2 = _interopRequireDefault(_App);
+
+	var _Content = __webpack_require__(7);
 
 	var _Content2 = _interopRequireDefault(_Content);
 
-	var _NotFound = __webpack_require__(24);
+	var _NotFound = __webpack_require__(26);
 
 	var _NotFound2 = _interopRequireDefault(_NotFound);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = _react2.default.createElement(
-	    _reactRouter.Router,
-	    { history: _reactRouter.browserHistory },
+	  _reactRouter.Router,
+	  { history: _reactRouter.browserHistory },
+	  _react2.default.createElement(
+	    _reactRouter.Route,
+	    { path: '/(index.html)', component: _App2.default },
 	    _react2.default.createElement(_reactRouter.IndexRedirect, { to: '/2017/3' }),
 	    _react2.default.createElement(_reactRouter.Route, { name: 'report', path: '/:year/:quarter', component: _Content2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: '*', component: _NotFound2.default })
+	  )
 	);
 
-/***/ },
+/***/ }),
 /* 5 */
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
 
 	module.exports = require("react-dom");
 
-/***/ },
+/***/ }),
 /* 6 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = _react2.default.createClass({
+	  displayName: 'App',
+	  render: function render() {
+	    return _react2.default.createElement(
+	      'div',
+	      null,
+	      this.props.children
+	    );
+	  }
+	});
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -171,23 +206,23 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _axios = __webpack_require__(7);
+	var _axios = __webpack_require__(8);
 
 	var _axios2 = _interopRequireDefault(_axios);
 
-	var _Header = __webpack_require__(8);
+	var _Header = __webpack_require__(9);
 
 	var _Header2 = _interopRequireDefault(_Header);
 
-	var _Main = __webpack_require__(10);
+	var _Main = __webpack_require__(11);
 
 	var _Main2 = _interopRequireDefault(_Main);
 
-	var _Footer = __webpack_require__(18);
+	var _Footer = __webpack_require__(20);
 
 	var _Footer2 = _interopRequireDefault(_Footer);
 
-	var _NotFound = __webpack_require__(24);
+	var _NotFound = __webpack_require__(26);
 
 	var _NotFound2 = _interopRequireDefault(_NotFound);
 
@@ -270,15 +305,15 @@
 	    }
 	});
 
-/***/ },
-/* 7 */
-/***/ function(module, exports) {
+/***/ }),
+/* 8 */
+/***/ (function(module, exports) {
 
 	module.exports = require("axios");
 
-/***/ },
-/* 8 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -286,7 +321,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Dropdown = __webpack_require__(9);
+	var _Dropdown = __webpack_require__(10);
 
 	var _Dropdown2 = _interopRequireDefault(_Dropdown);
 
@@ -376,9 +411,9 @@
 
 	module.exports = Header;
 
-/***/ },
-/* 9 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ }),
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
 
@@ -450,9 +485,9 @@
 
 	module.exports = Dropdown;
 
-/***/ },
-/* 10 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ }),
+/* 11 */
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -462,31 +497,31 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _SidebarNav = __webpack_require__(11);
+	var _SidebarNav = __webpack_require__(12);
 
 	var _SidebarNav2 = _interopRequireDefault(_SidebarNav);
 
-	var _Section = __webpack_require__(12);
+	var _Section = __webpack_require__(14);
 
 	var _Section2 = _interopRequireDefault(_Section);
 
-	var _SplitColumns = __webpack_require__(13);
+	var _SplitColumns = __webpack_require__(15);
 
 	var _SplitColumns2 = _interopRequireDefault(_SplitColumns);
 
-	var _Figure = __webpack_require__(14);
+	var _Figure = __webpack_require__(16);
 
 	var _Figure2 = _interopRequireDefault(_Figure);
 
-	var _Paragraph = __webpack_require__(15);
+	var _Paragraph = __webpack_require__(17);
 
 	var _Paragraph2 = _interopRequireDefault(_Paragraph);
 
-	var _GraphTitle = __webpack_require__(16);
+	var _GraphTitle = __webpack_require__(18);
 
 	var _GraphTitle2 = _interopRequireDefault(_GraphTitle);
 
-	var _recharts = __webpack_require__(17);
+	var _recharts = __webpack_require__(19);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -689,70 +724,463 @@
 
 	module.exports = Main;
 
-/***/ },
-/* 11 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ }),
+/* 12 */
+/***/ (function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _scrollAnchors = __webpack_require__(13);
+
+	var _scrollAnchors2 = _interopRequireDefault(_scrollAnchors);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var SidebarNav = _react2.default.createClass({
-	  displayName: "SidebarNav",
-
+	  displayName: 'SidebarNav',
 
 	  render: function render() {
+	    console.log(_scrollAnchors2.default);
 	    return _react2.default.createElement(
-	      "nav",
-	      { className: "ma__action-details__anchor-links js-scroll-anchors", "aria-labelledby": "page_contents" },
+	      'nav',
+	      { className: 'ma__action-details__anchor-links js-scroll-anchors', 'aria-labelledby': 'page_contents' },
 	      _react2.default.createElement(
-	        "h3",
-	        { className: "visually-hidden", id: "page_contents" },
-	        "Page Contents"
+	        'h3',
+	        { className: 'visually-hidden', id: 'page_contents' },
+	        'Page Contents'
 	      ),
 	      _react2.default.createElement(
-	        "button",
-	        { className: "ma__action-details__toggle-link js-scroll-anchors-toggle" },
-	        "+"
+	        'button',
+	        { className: 'ma__action-details__toggle-link js-scroll-anchors-toggle' },
+	        '+'
 	      ),
 	      _react2.default.createElement(
-	        "a",
-	        { href: "#overview", className: "is-active" },
-	        "Overview"
+	        'a',
+	        { href: '#overview', className: 'is-active' },
+	        'Overview'
 	      ),
 	      _react2.default.createElement(
-	        "a",
-	        { href: "#geographic", className: true },
-	        "Geographic Data"
+	        'a',
+	        { href: '#geographic', className: true },
+	        'Geographic Data'
 	      ),
 	      _react2.default.createElement(
-	        "a",
-	        { href: "#demographics", className: true },
-	        "Demographics"
+	        'a',
+	        { href: '#demographics', className: true },
+	        'Demographics'
 	      ),
 	      _react2.default.createElement(
-	        "a",
-	        { href: "#prescription", className: true },
-	        "Prescription Activity"
+	        'a',
+	        { href: '#prescription', className: true },
+	        'Prescription Activity'
 	      ),
 	      _react2.default.createElement(
-	        "a",
-	        { href: "#emergency", className: true },
-	        "Emergency Incidents"
+	        'a',
+	        { href: '#emergency', className: true },
+	        'Emergency Incidents'
 	      )
 	    );
+	  },
+	  componentDidMount: function componentDidMount() {
+	    $(".js-scroll-anchors").each(function () {
+	      var $el = $(this),
+	          $elParent = $el.parent().css('position') === 'relative' ? $el.parent() : $el.parent().offsetParent(),
+	          elHeight = void 0,
+	          headerBuffer = 0,
+	          lowerLimit = void 0,
+	          upperLimit = void 0,
+	          debounceTimer = void 0,
+	          activeClass = "is-active",
+	          activeAnchor = 0,
+	          anchors = [],
+	          numAnchors = 0,
+	          isMobile = false,
+	          linkScrolling = false;
+
+	      setVariables();
+
+	      // default assumption as to where the screen will load
+	      $el.attr('data-sticky', 'top');
+
+	      // update variables one more time to catch any post page load changes
+	      window.setTimeout(function () {
+	        setVariables();
+	      }, 1000);
+
+	      $el.find('a').on('click', function (e) {
+	        e.preventDefault();
+
+	        // is the menu closed on mobile
+	        if (!$el.hasClass('is-open') && isMobile) {
+	          // just show the menu
+	          $el.addClass('is-open');
+	          return;
+	        }
+
+	        // find the location of the desired link and scroll the page
+	        var position = anchors[$(this).data('index')].position;
+	        // close the menu
+	        $el.removeClass('is-open');
+	        // remove active flag from other links
+	        $el.find('.' + activeClass).removeClass(activeClass);
+	        // mark this link as active
+	        $(this).addClass(activeClass);
+	        activeAnchor = $(this).data('index');
+	        // prevent the scroll event from updating active links
+	        linkScrolling = true;
+
+	        $("html,body").stop(true, true).animate({ scrollTop: position }, '750', function () {
+	          linkScrolling = false;
+	        });
+	      });
+
+	      $el.find(".js-scroll-anchors-toggle").on('click', function () {
+	        $el.toggleClass('is-open');
+	      });
+
+	      // make the links sticky
+	      $(window).resize(function () {
+	        if (typeof debounceTimer === "number") {
+	          window.clearTimeout(debounceTimer);
+	        }
+	        debounceTimer = window.setTimeout(function () {
+	          setVariables();
+	          setPosition();
+	          activateLink();
+	        }, 300);
+	      });
+
+	      $(window).scroll(function () {
+	        setPosition();
+	        activateLink();
+	      });
+
+	      function setVariables() {
+	        var topOffset = 0;
+
+	        headerBuffer = 0;
+	        elHeight = $el.height();
+	        upperLimit = $elParent.offset().top;
+	        isMobile = checkMobile($el);
+
+	        if ($elParent[0].hasAttribute("style") && !isMobile) {
+	          $elParent.removeAttr('style');
+	        }
+
+	        if (isMobile) {
+	          headerBuffer = $('.js-sticky-header').height() || 0;
+	          upperLimit -= headerBuffer;
+	          topOffset = elHeight;
+	        }
+
+	        lowerLimit = upperLimit + $elParent.outerHeight(true) - $el.height();
+
+	        // locate the position of all of the anchor targets
+	        anchors = new Array();
+	        $el.find('a').each(function (i, e) {
+	          var hash = this.hash,
+	              position = $(hash).offset() ? $(hash).offset().top - headerBuffer - topOffset : upperLimit;
+
+	          anchors[i] = { hash: hash, position: position };
+
+	          $(this).data('index', i);
+	        });
+
+	        // record the number of anchors for performance
+	        numAnchors = anchors.length;
+	      }
+
+	      function setPosition() {
+	        var windowTop = $(window).scrollTop(),
+	            attr = $el.attr('data-sticky'),
+	            top = attr !== 'top' && windowTop <= upperLimit,
+	            middle = attr !== 'middle' && windowTop < lowerLimit && windowTop > upperLimit,
+	            bottom = attr !== 'bottom' && windowTop >= lowerLimit;
+
+	        if ($elParent[0].hasAttribute("style") && !isMobile) {
+	          $elParent.removeAttr('style');
+	        }
+
+	        if (!$elParent[0].hasAttribute("style") && isMobile && attr === 'middle') {
+	          $elParent.css({ 'paddingTop': elHeight });
+	        }
+
+	        if (top) {
+	          $el.attr('data-sticky', 'top');
+
+	          if (isMobile) {
+	            $elParent.removeAttr('style');
+	          }
+	        } else if (middle) {
+	          $el.attr('data-sticky', 'middle');
+
+	          if (isMobile) {
+	            $elParent.css({ 'paddingTop': elHeight });
+	            $el.css({ 'top': 0 });
+	          }
+	        } else if (bottom) {
+	          $el.attr('data-sticky', 'bottom');
+
+	          if (isMobile) {
+	            $elParent.removeAttr('style');
+	          }
+	        }
+	      }
+
+	      function activateLink() {
+	        // do we have more than one anchor
+	        if (numAnchors < 2 || linkScrolling) {
+	          return;
+	        }
+
+	        // get the current scroll position and offset by half the view port
+	        var windowTop = $(window).scrollTop() + window.innerHeight / 2,
+	            currentAnchor = activeAnchor;
+
+	        // is there a prev target
+	        // and
+	        // is the current scroll position above the current target
+	        if (currentAnchor > 0 && windowTop < anchors[activeAnchor].position) {
+	          // make the prev link active
+	          --activeAnchor;
+	        }
+
+	        // is there a next target
+	        // and
+	        // is the current scroll position below the next target
+	        else if (currentAnchor < numAnchors - 1 && windowTop > anchors[activeAnchor + 1].position) {
+	            // make the next link active
+	            ++activeAnchor;
+	          }
+
+	        if (currentAnchor !== activeAnchor) {
+	          // move the active flag
+	          $el.find('.' + activeClass).removeClass(activeClass);
+	          $el.find('a').eq(activeAnchor).addClass(activeClass);
+	        }
+	      }
+	    });
+
+	    function checkMobile($el) {
+	      var value = "true";
+	      try {
+	        value = window.getComputedStyle($el[0], ':before').getPropertyValue('content').replace(/\"/g, '');
+	      } catch (err) {}
+	      return value === "false" ? false : true;
+	    };
 	  }
 	});
 
 	module.exports = SidebarNav;
 
-/***/ },
-/* 12 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ }),
+/* 13 */
+/***/ (function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	exports.default = function (window, document, $, undefined) {
+
+	  $(".js-scroll-anchors").each(function () {
+	    var $el = $(this),
+	        $elParent = $el.parent().css('position') === 'relative' ? $el.parent() : $el.parent().offsetParent(),
+	        elHeight = void 0,
+	        headerBuffer = 0,
+	        lowerLimit = void 0,
+	        upperLimit = void 0,
+	        debounceTimer = void 0,
+	        activeClass = "is-active",
+	        activeAnchor = 0,
+	        anchors = [],
+	        numAnchors = 0,
+	        isMobile = false,
+	        linkScrolling = false;
+
+	    setVariables();
+
+	    // default assumption as to where the screen will load
+	    $el.attr('data-sticky', 'top');
+
+	    // update variables one more time to catch any post page load changes
+	    window.setTimeout(function () {
+	      setVariables();
+	    }, 1000);
+
+	    $el.find('a').on('click', function (e) {
+	      e.preventDefault();
+
+	      // is the menu closed on mobile
+	      if (!$el.hasClass('is-open') && isMobile) {
+	        // just show the menu
+	        $el.addClass('is-open');
+	        return;
+	      }
+
+	      // find the location of the desired link and scroll the page
+	      var position = anchors[$(this).data('index')].position;
+	      // close the menu
+	      $el.removeClass('is-open');
+	      // remove active flag from other links
+	      $el.find('.' + activeClass).removeClass(activeClass);
+	      // mark this link as active
+	      $(this).addClass(activeClass);
+	      activeAnchor = $(this).data('index');
+	      // prevent the scroll event from updating active links
+	      linkScrolling = true;
+
+	      $("html,body").stop(true, true).animate({ scrollTop: position }, '750', function () {
+	        linkScrolling = false;
+	      });
+	    });
+
+	    $el.find(".js-scroll-anchors-toggle").on('click', function () {
+	      $el.toggleClass('is-open');
+	    });
+
+	    // make the links sticky
+	    $(window).resize(function () {
+	      if (typeof debounceTimer === "number") {
+	        window.clearTimeout(debounceTimer);
+	      }
+	      debounceTimer = window.setTimeout(function () {
+	        setVariables();
+	        setPosition();
+	        activateLink();
+	      }, 300);
+	    });
+
+	    $(window).scroll(function () {
+	      setPosition();
+	      activateLink();
+	    });
+
+	    function setVariables() {
+	      var topOffset = 0;
+
+	      headerBuffer = 0;
+	      elHeight = $el.height();
+	      upperLimit = $elParent.offset().top;
+	      isMobile = checkMobile($el);
+
+	      if ($elParent[0].hasAttribute("style") && !isMobile) {
+	        $elParent.removeAttr('style');
+	      }
+
+	      if (isMobile) {
+	        headerBuffer = $('.js-sticky-header').height() || 0;
+	        upperLimit -= headerBuffer;
+	        topOffset = elHeight;
+	      }
+
+	      lowerLimit = upperLimit + $elParent.outerHeight(true) - $el.height();
+
+	      // locate the position of all of the anchor targets
+	      anchors = new Array();
+	      $el.find('a').each(function (i, e) {
+	        var hash = this.hash,
+	            position = $(hash).offset() ? $(hash).offset().top - headerBuffer - topOffset : upperLimit;
+
+	        anchors[i] = { hash: hash, position: position };
+
+	        $(this).data('index', i);
+	      });
+
+	      // record the number of anchors for performance
+	      numAnchors = anchors.length;
+	    }
+
+	    function setPosition() {
+	      var windowTop = $(window).scrollTop(),
+	          attr = $el.attr('data-sticky'),
+	          top = attr !== 'top' && windowTop <= upperLimit,
+	          middle = attr !== 'middle' && windowTop < lowerLimit && windowTop > upperLimit,
+	          bottom = attr !== 'bottom' && windowTop >= lowerLimit;
+
+	      if ($elParent[0].hasAttribute("style") && !isMobile) {
+	        $elParent.removeAttr('style');
+	      }
+
+	      if (!$elParent[0].hasAttribute("style") && isMobile && attr === 'middle') {
+	        $elParent.css({ 'paddingTop': elHeight });
+	      }
+
+	      if (top) {
+	        $el.attr('data-sticky', 'top');
+
+	        if (isMobile) {
+	          $elParent.removeAttr('style');
+	        }
+	      } else if (middle) {
+	        $el.attr('data-sticky', 'middle');
+
+	        if (isMobile) {
+	          $elParent.css({ 'paddingTop': elHeight });
+	        }
+	      } else if (bottom) {
+	        $el.attr('data-sticky', 'bottom');
+
+	        if (isMobile) {
+	          $elParent.removeAttr('style');
+	        }
+	      }
+	    }
+
+	    function activateLink() {
+	      // do we have more than one anchor
+	      if (numAnchors < 2 || linkScrolling) {
+	        return;
+	      }
+
+	      // get the current scroll position and offset by half the view port
+	      var windowTop = $(window).scrollTop() + window.innerHeight / 2,
+	          currentAnchor = activeAnchor;
+
+	      // is there a prev target
+	      // and
+	      // is the current scroll position above the current target
+	      if (currentAnchor > 0 && windowTop < anchors[activeAnchor].position) {
+	        // make the prev link active
+	        --activeAnchor;
+	      }
+
+	      // is there a next target
+	      // and
+	      // is the current scroll position below the next target
+	      else if (currentAnchor < numAnchors - 1 && windowTop > anchors[activeAnchor + 1].position) {
+	          // make the next link active
+	          ++activeAnchor;
+	        }
+
+	      if (currentAnchor !== activeAnchor) {
+	        // move the active flag
+	        $el.find('.' + activeClass).removeClass(activeClass);
+	        $el.find('a').eq(activeAnchor).addClass(activeClass);
+	      }
+	    }
+	  });
+
+	  function checkMobile($el) {
+	    var value = "true";
+	    try {
+	      value = window.getComputedStyle($el[0], ':before').getPropertyValue('content').replace(/\"/g, '');
+	    } catch (err) {}
+	    return value === "false" ? false : true;
+	  };
+	};
+
+	window, document, jQuery;
+
+/***/ }),
+/* 14 */
+/***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
 
@@ -780,9 +1208,9 @@
 
 	module.exports = Section;
 
-/***/ },
-/* 13 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ }),
+/* 15 */
+/***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
 
@@ -822,9 +1250,9 @@
 
 	module.exports = SplitColumns;
 
-/***/ },
-/* 14 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ }),
+/* 16 */
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -870,9 +1298,9 @@
 
 	module.exports = Figure;
 
-/***/ },
-/* 15 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ }),
+/* 17 */
+/***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
 
@@ -912,9 +1340,9 @@
 
 	module.exports = Paragraph;
 
-/***/ },
-/* 16 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ }),
+/* 18 */
+/***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
 
@@ -947,15 +1375,15 @@
 
 	module.exports = GraphTitle;
 
-/***/ },
-/* 17 */
-/***/ function(module, exports) {
+/***/ }),
+/* 19 */
+/***/ (function(module, exports) {
 
 	module.exports = require("recharts");
 
-/***/ },
-/* 18 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ }),
+/* 20 */
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -963,15 +1391,15 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _SocialMedia = __webpack_require__(19);
+	var _SocialMedia = __webpack_require__(21);
 
 	var _SocialMedia2 = _interopRequireDefault(_SocialMedia);
 
-	var _Logo = __webpack_require__(20);
+	var _Logo = __webpack_require__(22);
 
 	var _Logo2 = _interopRequireDefault(_Logo);
 
-	var _FooterLinks = __webpack_require__(21);
+	var _FooterLinks = __webpack_require__(23);
 
 	var _FooterLinks2 = _interopRequireDefault(_FooterLinks);
 
@@ -1038,15 +1466,45 @@
 	        )
 	      )
 	    );
-	  }
+	  },
+	  componentDidMount: function componentDidMount() {
+	    var $footer = $('.js-footer'),
+	        visibleThreshold = 250,
+	        staticThreshold = 50;
 
+	    $(".js-back2top").each(function () {
+	      var $el = $(this);
+
+	      $el.on('click', function (e) {
+	        e.preventDefault();
+	        try {
+	          $("html, body").stop(true, true).animate({ scrollTop: 0 }, '750');
+	        } catch (e) {
+	          $('body').scrollTop(0);
+	        }
+	        return false;
+	      });
+
+	      $(window).on('scroll', function () {
+	        // if we've exceeded the threshold of scrolling
+	        // from the top, show control
+	        var scrollTop = $(window).scrollTop();
+
+	        if (scrollTop > visibleThreshold) {
+	          $el.removeClass('is-hidden');
+	        } else {
+	          $el.addClass('is-hidden');
+	        }
+	      });
+	    });
+	  }
 	});
 
 	module.exports = Footer;
 
-/***/ },
-/* 19 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ }),
+/* 21 */
+/***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
 
@@ -1192,9 +1650,9 @@
 
 	module.exports = SocialMedia;
 
-/***/ },
-/* 20 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ }),
+/* 22 */
+/***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
 
@@ -1228,9 +1686,9 @@
 
 	module.exports = Logo;
 
-/***/ },
-/* 21 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ }),
+/* 23 */
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -1238,11 +1696,11 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _LinkGroup = __webpack_require__(22);
+	var _LinkGroup = __webpack_require__(24);
 
 	var _LinkGroup2 = _interopRequireDefault(_LinkGroup);
 
-	var _Link = __webpack_require__(23);
+	var _Link = __webpack_require__(25);
 
 	var _Link2 = _interopRequireDefault(_Link);
 
@@ -1286,9 +1744,9 @@
 
 	module.exports = FooterLinks;
 
-/***/ },
-/* 22 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ }),
+/* 24 */
+/***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
 
@@ -1322,9 +1780,9 @@
 
 	module.exports = LinkGroup;
 
-/***/ },
-/* 23 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ }),
+/* 25 */
+/***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
 
@@ -1353,9 +1811,9 @@
 
 	module.exports = Link;
 
-/***/ },
-/* 24 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ }),
+/* 26 */
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -1367,15 +1825,15 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _NavLink = __webpack_require__(25);
+	var _NavLink = __webpack_require__(27);
 
 	var _NavLink2 = _interopRequireDefault(_NavLink);
 
-	var _Logo = __webpack_require__(20);
+	var _Logo = __webpack_require__(22);
 
 	var _Logo2 = _interopRequireDefault(_Logo);
 
-	var _Dropdown = __webpack_require__(9);
+	var _Dropdown = __webpack_require__(10);
 
 	var _Dropdown2 = _interopRequireDefault(_Dropdown);
 
@@ -1475,9 +1933,9 @@
 	  }
 	});
 
-/***/ },
-/* 25 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ }),
+/* 27 */
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -1503,5 +1961,5 @@
 	  }
 	});
 
-/***/ }
+/***/ })
 /******/ ]);
