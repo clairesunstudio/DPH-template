@@ -1,5 +1,5 @@
 {
-  "name": "tutorial",
+  "name": "dph-opioid-report",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -20,13 +20,10 @@
     "file-loader": "^0.10.1",
     "if-env": "^1.0.0",
     "jquery": "^3.2.1",
-    "json-loader": "^0.5.4",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-router": "^2.0.0",
-    "recharts": "git+https://github.com/clairesunstudio/rechart-custom-package.git",
-    "superagent": "^3.5.0",
-    "url-loader": "^0.5.8"
+    "recharts": "git+https://github.com/clairesunstudio/rechart-custom-package.git"
   },
   "devDependencies": {
     "babel-core": "^6.5.1",
